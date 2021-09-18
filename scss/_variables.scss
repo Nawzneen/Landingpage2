@@ -1,0 +1,27 @@
+$primary-color: #f3613c;
+$secondary-color: #242e52;
+$hover-color: #f78f77;
+$hover-color2: #9d9ca1;
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return $secondary-color;
+  } @else {
+    @return white;
+  }
+}
+
+@mixin transition-ease {
+  transition: all ease-in-out 0.5s;
+}
+
+// animation
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}

@@ -1,0 +1,250 @@
+@media screen and (max-width: 767px) {
+  .navbar__section {
+    .container {
+      .checkbtn1 {
+        display: block;
+      }
+      .checkbtn2 {
+        display: none;
+      }
+      .get-started-btn {
+        display: none;
+      }
+      ul {
+        overflow: hidden;
+        position: fixed;
+        border-radius: 20px;
+        width: 80%;
+        height: 50vh;
+        margin: 0;
+        padding: 0;
+        padding-top: 8%;
+        top: 100px;
+        background-color: rgba($primary-color, 0.8);
+        text-align: center;
+        right: -100%;
+        z-index: 4;
+        @include transition-ease;
+        li {
+          display: block;
+          padding: 2vh;
+          a {
+            color: $secondary-color;
+            font-weight: bold;
+            &:hover,
+            .active {
+              color: white;
+              background: rgba(white, 0.1);
+              padding: 3px 10px;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+      #check:checked ~ .container {
+        background-color: rgba(black, 1);
+        z-index: 5;
+      }
+      #check:checked ~ ul {
+        right: 10%;
+      }
+      #check:checked ~ .checkbtn1 {
+        display: none;
+      }
+      #check:checked ~ .checkbtn2 {
+        display: block;
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        z-index: 5;
+      }
+    }
+  }
+
+  .main {
+    .container {
+      .row {
+        display: flex;
+        flex-flow: column-reverse;
+        .main-text {
+          h2 {
+            // justify-content: center;
+            padding-left: 3vw;
+            font-size: 1.8rem;
+          }
+          .get-started-btn {
+            text-align: center !important;
+          }
+        }
+      }
+    }
+  }
+
+  // start of second main section
+  .main {
+    .container {
+      .left-column {
+        h3 {
+          margin-top: 30px;
+          font-size: 1.8rem;
+        }
+      }
+      .right-column {
+        button {
+        }
+        .box {
+          margin: 0;
+          .small-btn {
+            border-radius: 50px;
+            font-size: 0.7rem;
+            width: 40px;
+            height: 30px;
+          }
+          .box__content {
+            margin: 0;
+            padding: 0;
+            padding-top: 40px;
+            h4 {
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+      .left-column {
+        margin-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  // CAROUSEL
+  .carousels {
+    .container {
+      .carousel__box {
+        width: 60%;
+
+        .carousel__header {
+        }
+        .carousel__paragraph {
+          padding: 0;
+          margin: 0;
+        }
+      }
+      .carousel__btns {
+        button {
+          height: 50px;
+          width: 30px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  // FOOTER
+  .footer {
+    .footer__part1 {
+      .footer__row--first {
+        h5 {
+          font-size: 2rem;
+        }
+        text-align: center !important;
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        button {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .footer__part2 {
+    .second-row {
+      display: flex;
+      flex-flow: column-reverse;
+      .footer__row--second {
+        height: 15vh;
+
+        padding: 0;
+        text-align: center !important;
+        ul {
+          padding: 0;
+        }
+      }
+      img {
+        margin: 70px;
+      }
+      .social-icons {
+        // margin-top: 100px;
+        left: 30%;
+        bottom: 70%;
+
+        // text-align: center !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .navbar__section {
+    .container {
+      img {
+        margin: 0;
+        padding: 0;
+        // width: ;
+      }
+      ul {
+        margin: 0;
+        li {
+          margin: 0;
+          padding: 0 5px;
+          a {
+          }
+        }
+      }
+      .get-started-btn {
+        display: none;
+      }
+    }
+  }
+
+  .main {
+    .container {
+      .row {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  // start of second main section
+  .main {
+    .container {
+      .left-column {
+        h3 {
+          font-size: 1.8rem;
+        }
+      }
+      .right-column {
+        button {
+        }
+        .box {
+          margin: 0;
+          .small-btn {
+            border-radius: 50px;
+            font-size: 0.7rem;
+            width: 40px;
+            height: 30px;
+          }
+          .box__content {
+            margin: 0;
+            padding-left: 50px;
+            h4 {
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.carousel__wrapper {
+  // justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  .carousel__box,
+  .carousel__box--hidden {
+    display: none;
+  }
+  .carousel__box {
+    // justify-content: center;
+    text-align: center;
+    width: 30%;
+    height: auto;
+    h5 {
+      font-weight: bold;
+      color: $secondary-color;
+    }
+    p {
+      color: $hover-color2;
+    }
+  }
+  .carousel__box--visible {
+    display: inline-block;
+    animation: fadeVisibility 0.5s;
+  }
+
+  // BTN
+  .carousel__btns {
+    display: flex;
+    width: 100%;
+
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    button {
+      border-radius: 50px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      font-weight: bolder;
+    }
+    &--prev {
+      margin-left: 1vw;
+    }
+    &--next {
+      margin-right: 1vw;
+    }
+  }
+}
